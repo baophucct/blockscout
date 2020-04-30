@@ -16,7 +16,9 @@
     "watch": "webpack --mode development --watch",
     "build": "webpack --mode development",
     "test": "jest",
-    "eslint": "eslint js/**"
+    "eslint": "eslint js/**",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.0-4",
@@ -28,7 +30,7 @@
     "highlight.js": "^9.16.2",
     "highlightjs-solidity": "^1.0.8",
     "humps": "^2.0.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "nanomorph": "^5.4.0",
@@ -39,7 +41,8 @@
     "popper.js": "^1.14.7",
     "reduce-reducers": "^0.4.3",
     "redux": "^4.0.5",
-    "urijs": "^1.19.2"
+    "urijs": "^1.19.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
@@ -71,5 +74,6 @@
     "moduleNameMapper": {
       "/css/app.scss": "<rootDir>/__mocks__/css/app.scss.js"
     }
-  }
+  },
+  "snyk": true
 }
